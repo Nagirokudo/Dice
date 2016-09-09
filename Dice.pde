@@ -1,4 +1,4 @@
-Die chou = new Die (myX,myY);
+Die chou;
 int total = 0;
 void setup()
 {
@@ -14,6 +14,7 @@ void draw()
 	{
 		for (int myY = 50; myY < 350; myY += 50)
 		{
+			chou = new Die (myX, myY);
 			chou. show();
 		}
 	}
@@ -45,7 +46,7 @@ class Die //models one single dice cube
 	{
 		//your code here
 		faceNum = (int)(Math.random()*7)+1;
-		total = faceNum;
+		total += faceNum;
 
 	}
 	void show()
