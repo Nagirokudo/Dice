@@ -1,5 +1,5 @@
 Die chou;
-int total = 0;
+int total;
 void setup()
 {
 	size (400,400);
@@ -27,6 +27,7 @@ void draw()
 void mousePressed()
 {
 	redraw();
+	total = 0;
 }
 class Die //models one single dice cube
 {
@@ -45,8 +46,9 @@ class Die //models one single dice cube
 	void roll()
 	{
 		//your code here
-		faceNum = (int)(Math.random()*7)+1;
-		total += faceNum;
+		faceNum = (int)(Math.random()*6)+1;
+		total +=  faceNum;
+
 
 	}
 	void show()
