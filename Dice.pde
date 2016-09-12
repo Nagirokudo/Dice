@@ -1,5 +1,6 @@
 Die chou;
 int total;
+int apple = 0;
 void setup()
 {
 	size (400,400);
@@ -22,6 +23,8 @@ void draw()
 	fill(#191970);
 	textSize(25);
 	text("Total: " + total, 10,380);
+	text("Apple: " + apple, 250, 380);
+	apple++;
 	
 }
 void mousePressed()
@@ -48,7 +51,6 @@ class Die //models one single dice cube
 		//your code here
 		faceNum = (int)(Math.random()*6)+1;
 		total +=  faceNum;
-
 
 	}
 	void show()
